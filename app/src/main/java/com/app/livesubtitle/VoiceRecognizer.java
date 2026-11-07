@@ -63,7 +63,7 @@ public class VoiceRecognizer extends Service {
         Log.d("VoiceRecognizer", "Starting VoiceRecognizer service");
 
         int h;
-        if (Objects.equals(LANGUAGE.SRC, "ja") || Objects.equals(LANGUAGE.SRC, "zh-Hans") || Objects.equals(LANGUAGE.SRC, "zh-Hant")) {
+        if (Objects.equals(LANGUAGE.SRC, "ja") || Objects.equals(LANGUAGE.SRC, "zh-CN") || Objects.equals(LANGUAGE.SRC, "zh-TW")) {
             h = 122;
         } else {
             h = 109;
