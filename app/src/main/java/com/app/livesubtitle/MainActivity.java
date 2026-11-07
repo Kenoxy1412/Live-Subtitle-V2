@@ -622,12 +622,12 @@ public class MainActivity extends AppCompatActivity {
                         switch (LANGUAGE.SRC_DIALECT) {
                             case "yue-Hant-HK":
                             case "cmn-Hant-TW":
-                                //LANGUAGE.SRC = "zh-Hant";
+                                //LANGUAGE.SRC = "zh-TW";
                                 LANGUAGE.SRC = "zh-TW";
                                 break;
                             case "cmn-Hans-CN":
                             case "cmn-Hans-HK":
-                                //LANGUAGE.SRC = "zh-Hant";
+                                //LANGUAGE.SRC = "zh-TW";
                                 LANGUAGE.SRC = "zh-CN";
                                 break;
                         }
@@ -643,7 +643,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 int h;
-                if (Objects.equals(LANGUAGE.DST, "ja") || Objects.equals(LANGUAGE.DST, "zh-Hans") || Objects.equals(LANGUAGE.DST, "zh-Hant")) {
+                if (Objects.equals(LANGUAGE.DST, "ja") || Objects.equals(LANGUAGE.DST, "zh-CN") || Objects.equals(LANGUAGE.DST, "zh-TW")) {
                     h = 75;
                 } else {
                     h = 62;
@@ -680,12 +680,12 @@ public class MainActivity extends AppCompatActivity {
                         switch (LANGUAGE.SRC_DIALECT) {
                             case "yue-Hant-HK":
                             case "cmn-Hant-TW":
-                                //LANGUAGE.SRC = "zh-Hant";
+                                //LANGUAGE.SRC = "zh-TW";
                                 LANGUAGE.SRC = "zh-TW";
                                 break;
                             case "cmn-Hans-CN":
                             case "cmn-Hans-HK":
-                                //LANGUAGE.SRC = "zh-Hans";
+                                //LANGUAGE.SRC = "zh-CN";
                                 LANGUAGE.SRC = "zh-CN";
                                 break;
                         }
@@ -709,6 +709,16 @@ public class MainActivity extends AppCompatActivity {
                     LANGUAGE.SRC_DIALECT = src_countries_dialects.get(LANGUAGE.SRC_COUNTRY);
                     if (LANGUAGE.SRC_DIALECT != null) {
                         LANGUAGE.SRC = LANGUAGE.SRC_DIALECT.split("-")[0];
+                        switch (LANGUAGE.SRC_DIALECT) {
+                            case "yue-Hant-HK":
+                            case "cmn-Hant-TW":
+                                LANGUAGE.SRC = "zh-TW";
+                                break;
+                            case "cmn-Hans-CN":
+                            case "cmn-Hans-HK":
+                                LANGUAGE.SRC = "zh-CN";
+                                break;
+                        }
                     }
                     setText(textview_src, LANGUAGE.SRC);
                 }
@@ -719,7 +729,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 int h;
-                if (Objects.equals(LANGUAGE.DST, "ja") || Objects.equals(LANGUAGE.DST, "zh-Hans") || Objects.equals(LANGUAGE.DST, "zh-Hant")) {
+                if (Objects.equals(LANGUAGE.DST, "ja") || Objects.equals(LANGUAGE.DST, "zh-CN") || Objects.equals(LANGUAGE.DST, "zh-TW")) {
                     h = 75;
                 } else {
                     h = 62;
@@ -754,6 +764,16 @@ public class MainActivity extends AppCompatActivity {
                     LANGUAGE.SRC_DIALECT = src_countries_dialects.get(LANGUAGE.SRC_COUNTRY);
                     if (LANGUAGE.SRC_DIALECT != null) {
                         LANGUAGE.SRC = LANGUAGE.SRC_DIALECT.split("-")[0];
+                        switch (LANGUAGE.SRC_DIALECT) {
+                            case "yue-Hant-HK":
+                            case "cmn-Hant-TW":
+                                LANGUAGE.SRC = "zh-TW";
+                                break;
+                            case "cmn-Hans-CN":
+                            case "cmn-Hans-HK":
+                                LANGUAGE.SRC = "zh-CN";
+                                break;
+                        }
                     }
                     setText(textview_src, LANGUAGE.SRC);
                 }
